@@ -15,7 +15,7 @@
 <body>
     <!-- Animacion -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark " id="Header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
         <div class="container">
             <a href="#" class="navbar-brand">Zona de juegos</a>
             <button type="button" class="navbar-toggler" data-bs-target = "#navbarNav" data-bs-toggle="collapse" aria-controls= "navbarNav" aria-expanded= "false" aria-lable = "Toggle Navbar">
@@ -33,43 +33,49 @@
       
           </div>
         </div>
-      </nav> -->
-      <div  id="filtroBlur"></div>
-   
-  
-    <!-- <div id="lottie-player-wrapper"> -->
+      </nav>
+    <div id="lottie-player-wrapper">
         <!-- Averiguar comnado minuto 540 -->
-        <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_rg8y5nzn.json"  background="transparent"  speed="0.5"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 
-    </div> --> 
+    </div>
     
-    
-        <div class="container-fluid" id="loginPlayRoom">
-            <div class="card">
-                <h1 class="card-header">PLAY ROOM</h1>
-                <div class="card-body">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">User</label>
-                      </div>
-                      <br>
-                      <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
-                      </div>
-                      <br>
-                  <a href="#" class="btn btn-primary">Login</a>
-                </div>
-              </div>
-            
-        </div>
    
 
-    
+    <div class="container-fluid" id="registerPlayRoom">
+        <div class="card">
+            <h1 class="card-header">PLAY ROOM</h1>
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col">
+                    <div class="row g-3">
+                        <div class="col">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        </div>
+                        <div class="col">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        </div>
+
+                        <label for="inputUser" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputUser" placeholder="User">
+  
+                        <label for="inputPassword" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputUser" placeholder="Password">
+                    </div>
+                      
+                    </div>
+                   
+                 
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                  </form>
+        
+    </div>
      
     <!-- Animacion Loading -->
-    <script src="script-home.js"></script>
+    <script src="script-register.js"></script>
 
     <!-- bootstrap JS  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
