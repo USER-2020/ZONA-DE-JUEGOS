@@ -1,0 +1,14 @@
+.navTitle{
+    font-family: 'Candal', sans-serif;
+    font-family: 'Lilita One', cursive;
+    font-size: 45px
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navTitle{
+        font-family: 'Candal', sans-serif;
+        font-family: 'Lilita One', cursive;
+        font-size:30px
+    }
+}
