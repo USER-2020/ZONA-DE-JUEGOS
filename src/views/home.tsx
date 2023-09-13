@@ -1,7 +1,7 @@
-import React from 'react'
 import Header from '../header'
 import Footer from '../footer'
-import HomeComponent from '../Home/homeComponent'
+import { HomeComponent } from '../Home/HomeComponent'
+
 
 const Home = () => {
   return (

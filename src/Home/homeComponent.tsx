@@ -1,20 +1,10 @@
-import React, { useState } from 'react'
-import { Accordion, AccordionBody, AccordionHeader, AccordionItem, UncontrolledCarousel } from 'reactstrap';
-
+import { AccordionBody, AccordionHeader, AccordionItem, UncontrolledAccordion, UncontrolledCarousel } from 'reactstrap';
 import Drug1 from '../assets/Dream_Background (1).jpg';
 import Drug2 from '../assets/Dream_Background (3).jpg';
 import Drug3 from '../assets/dream_TradingCard (2).jpg';
 
-const HomeComponent = () => {
+export const HomeComponent = () => {
 
-    const [open, setOpen] = useState('');
-    const toggle = (id) => {
-        if (open === id) {
-            setOpen();
-        } else {
-            setOpen(id);
-        }
-    }
     return (
         <div style={{ marginTop: '56px' }}>
             <div style={{ width: '100vw' }}>
@@ -38,30 +28,29 @@ const HomeComponent = () => {
                             key: 3,
                             src: Drug3
                         }
-                    ]}
-                />
+                    ]} />
                 {/* <UncontrolledCarousel
-                    items={[
-                        {
-                            altText: 'Slide 1',
-                            caption: 'Slide 1',
-                            key: 1,
-                            src: 'https://picsum.photos/id/123/1200/600'
-                        },
-                        {
-                            altText: 'Slide 2',
-                            caption: 'Slide 2',
-                            key: 2,
-                            src: 'https://picsum.photos/id/456/1200/600'
-                        },
-                        {
-                            altText: 'Slide 3',
-                            caption: 'Slide 3',
-                            key: 3,
-                            src: 'https://picsum.photos/id/678/1200/600'
-                        }
-                    ]}
-                /> */}
+                items={[
+                    {
+                        altText: 'Slide 1',
+                        caption: 'Slide 1',
+                        key: 1,
+                        src: 'https://picsum.photos/id/123/1200/600'
+                    },
+                    {
+                        altText: 'Slide 2',
+                        caption: 'Slide 2',
+                        key: 2,
+                        src: 'https://picsum.photos/id/456/1200/600'
+                    },
+                    {
+                        altText: 'Slide 3',
+                        caption: 'Slide 3',
+                        key: 3,
+                        src: 'https://picsum.photos/id/678/1200/600'
+                    }
+                ]}
+            /> */}
             </div>
             {/* Cards */}
             <div className="container px-4 py-5" id="custom-cards" style={{ marginTop: '25px' }}>
@@ -137,55 +126,60 @@ const HomeComponent = () => {
             {/* PlayList */}
             <div className="container px-4 py-5" id="custom-cards" style={{ marginTop: '25px' }}>
                 <h2 className="pb-2 border-bottom">PlayList</h2>
-                <div >
+                <div>
                     <div>
-                        <Accordion flush open={open} toggle={toggle}>
+                        <UncontrolledAccordion defaultOpen="1">
                             <AccordionItem>
-                                <AccordionHeader targetId="1">Viajes LSD</AccordionHeader>
+                                <AccordionHeader targetId="1">
+                                    Accordion Item 1
+                                </AccordionHeader>
                                 <AccordionBody accordionId="1">
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/cGOJB5xqMGc?si=ytMN5heKJ-zAXTsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/cGOJB5xqMGc?si=ytMN5heKJ-zAXTsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/cGOJB5xqMGc?si=ytMN5heKJ-zAXTsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/cGOJB5xqMGc?si=ytMN5heKJ-zAXTsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/cGOJB5xqMGc?si=ytMN5heKJ-zAXTsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/cGOJB5xqMGc?si=ytMN5heKJ-zAXTsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                    </div>
+                                    <strong>
+                                        This is the first item's accordion body.
+                                    </strong>
+                                    You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the{' '}
+                                    <code>
+                                        .accordion-body
+                                    </code>
+                                    , though the transition does limit overflow.
                                 </AccordionBody>
                             </AccordionItem>
                             <AccordionItem>
-                                <AccordionHeader targetId="2">GOOD TRIP</AccordionHeader>
+                                <AccordionHeader targetId="2">
+                                    Accordion Item 2
+                                </AccordionHeader>
                                 <AccordionBody accordionId="2">
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/tEBy8HzQFsY?si=8WdUQ4z0MHrXQDJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/tEBy8HzQFsY?si=8WdUQ4z0MHrXQDJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/tEBy8HzQFsY?si=8WdUQ4z0MHrXQDJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/tEBy8HzQFsY?si=8WdUQ4z0MHrXQDJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/tEBy8HzQFsY?si=8WdUQ4z0MHrXQDJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/tEBy8HzQFsY?si=8WdUQ4z0MHrXQDJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                    </div>
+                                    <strong>
+                                        This is the second item's accordion body.
+                                    </strong>
+                                    You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the{' '}
+                                    <code>
+                                        .accordion-body
+                                    </code>
+                                    , though the transition does limit overflow.
                                 </AccordionBody>
                             </AccordionItem>
                             <AccordionItem>
-                                <AccordionHeader targetId="3">Maydey Aterrizaje</AccordionHeader>
+                                <AccordionHeader targetId="3">
+                                    Accordion Item 3
+                                </AccordionHeader>
                                 <AccordionBody accordionId="3">
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/vSvrf84UjFg?si=-DvbDHezUjWgMDWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/vSvrf84UjFg?si=-DvbDHezUjWgMDWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/vSvrf84UjFg?si=-DvbDHezUjWgMDWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/vSvrf84UjFg?si=-DvbDHezUjWgMDWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/vSvrf84UjFg?si=-DvbDHezUjWgMDWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/vSvrf84UjFg?si=-DvbDHezUjWgMDWL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                    </div>
+                                    <strong>
+                                        This is the third item's accordion body.
+                                    </strong>
+                                    You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the{' '}
+                                    <code>
+                                        .accordion-body
+                                    </code>
+                                    , though the transition does limit overflow.
                                 </AccordionBody>
                             </AccordionItem>
-                        </Accordion>
+                        </UncontrolledAccordion>
                     </div>
                 </div>
             </div>
             {/* PlayList */}
         </div>
-    )
-}
+    );
+};
 
-export default HomeComponent
