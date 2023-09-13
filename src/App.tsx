@@ -59,23 +59,23 @@ function DynamicTitle() {
 }
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Cambia el tiempo de carga aquí según tus necesidades
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3000); // Cambia el tiempo de carga aquí según tus necesidades
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, []);
 
   return (
     <div>
       <Router>
         <Route component={DynamicTitle} />
-        <Suspense fallback={loading ? <MyLottiePlayer /> : <div>Loading ...</div>}> {/* Mostrar el LottiePlayer mientras se cargan las vistas */}
+        <Suspense fallback={<MyLottiePlayer />}> {/* Mostrar el LottiePlayer mientras se cargan las vistas */}
           <Switch>
             <Route path="/" exact component={ViewHome} />
             <Route path="/infoSustancias" exact component={ViewInfoSustancias} />
