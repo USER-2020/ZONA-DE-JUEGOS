@@ -12,12 +12,12 @@ const ViewMultimedia = React.lazy(() => import('./views/multimedia'));
 function MyLottiePlayer() {
   return (
     <div style={{
-      position: 'fixed', // Establece la posición a fija
+      position: 'fixed',
       top: 0,
       left: 0,
       width: '100vw',
       height: '100vh',
-      zIndex: 9999, // Ajusta el valor de zIndex para asegurarte de que esté por encima del contenido
+      zIndex: 9999,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -26,7 +26,6 @@ function MyLottiePlayer() {
     </div>
   );
 }
-
 
 function DynamicTitle() {
   const location = useLocation();
@@ -76,13 +75,13 @@ const App = () => {
     <div>
       <Router>
         <Route component={DynamicTitle} />
-        <Suspense fallback={loading ? <MyLottiePlayer /> : <div>Loading ...</div> }>
+        <Suspense fallback={<MyLottiePlayer />}> {/* Mostrar el LottiePlayer mientras se cargan las vistas */}
           <Switch>
-            <Route path="/" exact render={() => <ViewHome />} />
-            <Route path="/infoSustancias" exact render={() => <ViewInfoSustancias />} />
-            <Route path="/eventos" exact render={() => <ViewEventos />} />
-            <Route path="/playlist" exact render={() => <ViewPlaylist />} />
-            <Route path="/multimedia" exact render={() => <ViewMultimedia />} />
+            <Route path="/" exact component={ViewHome} />
+            <Route path="/infoSustancias" exact component={ViewInfoSustancias} />
+            <Route path="/eventos" exact component={ViewEventos} />
+            <Route path="/playlist" exact component={ViewPlaylist} />
+            <Route path="/multimedia" exact component={ViewMultimedia} />
           </Switch>
         </Suspense>
       </Router>

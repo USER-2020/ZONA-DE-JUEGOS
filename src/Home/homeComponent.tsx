@@ -6,7 +6,7 @@ import Drug3 from '../assets/dream_TradingCard (2).jpg';
 export const HomeComponent = () => {
 
     return (
-        <div style={{ marginTop: '56px' }}>
+        <div style={{ marginTop: '0px' }}>
             <div style={{ width: '100vw' }}>
                 <UncontrolledCarousel
                     items={[
