@@ -4,11 +4,11 @@ import Smoke from './assets/lotties/Animation - 1694578182316.json';
 import Lottie from 'lottie-react';
 
 
-const ViewHome = React.lazy(() => import('./views/home.tsx'));
-const ViewInfoSustancias = React.lazy(() => import('./views/infoSustancias.tsx'));
-const ViewEventos = React.lazy(() => import('./views/eventos.tsx'));
-const ViewPlaylist = React.lazy(() => import('./views/playlist.tsx'));
-const ViewMultimedia = React.lazy(() => import('./views/multimedia.tsx'));
+const ViewHome = React.lazy(() => import('./views/home'));
+const ViewInfoSustancias = React.lazy(() => import('./views/infoSustancias'));
+const ViewEventos = React.lazy(() => import('./views/eventos'));
+const ViewPlaylist = React.lazy(() => import('./views/playlist'));
+const ViewMultimedia = React.lazy(() => import('./views/multimedia'));
 
 function MyLottiePlayer() {
   return (
