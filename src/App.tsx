@@ -12,18 +12,20 @@ const ViewMultimedia = React.lazy(() => import('./views/multimedia'));
 function MyLottiePlayer() {
   return (
     <div style={{
-      position: 'absolute', // Cambia a 'absolute' para que no bloquee el scroll
-      top: '50%', // Ajusta la posición vertical
-      left: '50%', // Ajusta la posición horizontal
-      transform: 'translate(-50%, -50%)',
-      zIndex: 9999,
-      overflow: 'scroll'
+      position: 'fixed', // Establece la posición a fija
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      zIndex: 9999, // Ajusta el valor de zIndex para asegurarte de que esté por encima del contenido
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
     }}>
       <Lottie animationData={Smoke} loop={true} />
     </div>
   );
 }
-
 
 
 function DynamicTitle() {
@@ -74,7 +76,7 @@ const App = () => {
     <div>
       <Router>
         <Route component={DynamicTitle} />
-        <Suspense fallback={<Lottie animationData={Smoke} loop={true} />}>
+        <Suspense fallback={loading ? <MyLottiePlayer /> : <div>Loading ...</div> }>
           <Switch>
             <Route path="/" exact render={() => <ViewHome />} />
             <Route path="/infoSustancias" exact render={() => <ViewInfoSustancias />} />
