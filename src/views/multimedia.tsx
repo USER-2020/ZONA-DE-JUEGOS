@@ -5,7 +5,7 @@ const Multimedia = () => {
     return (
         <div>
             <Header />
-            <div style={{ marginTop: '100px' }}>
+            <div >
                 Multimedia
             </div>
             <Footer />

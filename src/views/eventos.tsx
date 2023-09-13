@@ -5,7 +5,7 @@ const Eventos = () => {
     return (
         <div>
             <Header />
-            <div style={{ marginTop: '100px' }}>
+            <div >
                 Eventos cerca de ti 
             </div>
             <Footer />

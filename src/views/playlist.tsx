@@ -5,7 +5,7 @@ const Playlist = () => {
     return (
         <div>
             <Header />
-            <div style={{ marginTop: '100px' }}>
+            <div>
                 PlayList para el viaje
             </div>
             <Footer />

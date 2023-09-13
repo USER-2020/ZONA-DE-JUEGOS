@@ -75,7 +75,7 @@ const App = () => {
     <div>
       <Router>
         <Route component={DynamicTitle} />
-        <Suspense fallback={<MyLottiePlayer />}> {/* Mostrar el LottiePlayer mientras se cargan las vistas */}
+        <Suspense fallback={loading ? <MyLottiePlayer /> : <div>Loading ...</div>}> {/* Mostrar el LottiePlayer mientras se cargan las vistas */}
           <Switch>
             <Route path="/" exact component={ViewHome} />
             <Route path="/infoSustancias" exact component={ViewInfoSustancias} />

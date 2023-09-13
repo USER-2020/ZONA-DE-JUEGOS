@@ -5,7 +5,7 @@ const InfoSustancias = () => {
     return (
         <div>
             <Header />
-            <div style={{ marginTop: '100px' }}>
+            <div>
                 Informacion de sustancias
             </div>
             <Footer />
