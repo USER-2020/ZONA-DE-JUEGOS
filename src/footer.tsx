@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <div style={{marginTop:'25px'}}>
             <div className="container px-4 py-5" id="icon-grid">
-                <h2 className="pb-2 border-bottom">Icon grid</h2>
+                {/* <h2 className="pb-2 border-bottom">Icon grid</h2> */}
 
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
                     <div className="col d-flex align-items-start">
