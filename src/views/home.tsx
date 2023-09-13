@@ -1,6 +1,7 @@
 import Header from '../header'
 import Footer from '../footer'
-import { HomeComponent } from '../Home/HomeComponent.tsx'
+import { HomeComponent } from '../Home/homeComponent.tsx'
+
 
 
 const Home = () => {
