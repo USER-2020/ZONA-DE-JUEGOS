@@ -91,7 +91,7 @@ const App = () => {
           </div>
         ) : (
           <Router>
-            <Route element={DynamicTitle} />
+            <Route component={DynamicTitle} />
             <Route path="/" component={ViewHome} />
             <Route path="/infoSustancias" component={ViewInfoSustancias} />
             <Route path="/eventos" component={ViewEventos} />
