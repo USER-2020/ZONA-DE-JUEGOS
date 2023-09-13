@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Route, useLocation, Switch } from 'react-router-dom';
 import Smoke from './assets/lotties/Animation - 1694578182316.json';
 import Lottie from 'lottie-react';
