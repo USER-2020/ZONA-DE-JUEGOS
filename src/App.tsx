@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, useLocation, Switch } from 'react-router-dom';
 import Smoke from './assets/lotties/Animation - 1694578182316.json';
 import Lottie from 'lottie-react';
 
@@ -92,11 +92,13 @@ const App = () => {
         ) : (
           <Router>
             <Route component={DynamicTitle} />
-            <Route path="/" exact component={ViewHome} />
-            <Route path="/infoSustancias" exact component={ViewInfoSustancias} />
-            <Route path="/eventos" exact component={ViewEventos} />
-            <Route path="/playlist" exact component={ViewPlaylist} />
-            <Route path="/multimedia" exact component={ViewMultimedia} />
+            <Switch>
+              <Route path="/" exact component={ViewHome} />
+              <Route path="/infoSustancias" exact component={ViewInfoSustancias} />
+              <Route path="/eventos" exact component={ViewEventos} />
+              <Route path="/playlist" exact component={ViewPlaylist} />
+              <Route path="/multimedia" exact component={ViewMultimedia} />
+            </Switch>
           </Router>
         )}
       </div>
