@@ -71,6 +71,14 @@ const App = () => {
   //   };
   // }, []);
 
+  useEffect(() => {
+    
+    if (window.location.pathname !== '/') {
+      // Redirigir a la página de inicio si la URL no es la raíz
+      window.location.href = '/';
+    }
+  }, []);
+
   return (
     <div>
       <Router>
