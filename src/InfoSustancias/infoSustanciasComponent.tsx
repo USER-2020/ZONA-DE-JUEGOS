@@ -1,11 +1,19 @@
-import { Button, Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
-import MDMA from '../assets/Dream_Background (1).jpg';
+import { Button, Card, CardBody, CardImg, CardText, CardTitle, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import info from '../services/infoSutancias.json';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+// Define el tipo para los elementos en el array 'info'
+type ItemType = {
+    id: string;
+    titulo: string;
+    Descripcion_corta: string;
+    Descripcion: string;
+    img: string;
+  };
 
 const InfoSustanciasComponent = () => {
 
-    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState<ItemType | null>(null);
     const [modalOpen, setModalOpen] = useState(false);
 
     // const [jsonData, setJsonData] = useState(null);
@@ -36,8 +44,8 @@ const InfoSustanciasComponent = () => {
     //     loadCSV();
     // }, []);
 
-    const openModal = (product) => {
-        setSelectedProduct(product);
+    const openModal = (item: ItemType) => {
+        setSelectedProduct(item);
         setModalOpen(true);
     };
 
